@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator-container {
+    padding: 20px;
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 320px;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 28px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: right;
+    background-color: #f9f9f9;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+#display:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-number {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-number:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-operator {
+    background-color: #667eea;
+}
+
+.btn-operator:hover {
+    background-color: #5568d3;
+}
+
+.btn-equals {
+    background-color: #4caf50;
+    grid-column: span 2;
+}
+
+.btn-equals:hover {
+    background-color: #45a049;
+}
+
+.btn-clear {
+    background-color: #f44336;
+}
+
+.btn-clear:hover {
+    background-color: #da190b;
+}
+
+.btn-delete {
+    background-color: #ff9800;
+}
+
+.btn-delete:hover {
+    background-color: #e68900;
+}
+
+.btn-decimal {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-decimal:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-zero {
+    grid-column: span 1;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        max-width: 320px;
+    }
+}
